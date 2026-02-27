@@ -26,7 +26,6 @@ app.get("/states", (req, res) => {
 });
 
 
-// 2. GET highest GDP
 app.get("/states/highest-gdp", (req, res) => {
 
   let highest = states[0];
@@ -100,7 +99,7 @@ app.put("/states/:id/budget", (req, res) => {
 
   if (!state) {
     return res.status(404).json({ message: "State not found" });
-  }
+  } 
 
   state.annualBudget = req.body.annualBudget;
 
