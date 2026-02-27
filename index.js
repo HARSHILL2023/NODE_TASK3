@@ -172,8 +172,9 @@ app.patch("/states/:id", (req, res) => {
 
 app.delete("/states/:id", (req, res) => {
 
-  let id = parseInt(req.params.id);
-  let index = states.findIndex(s => s.id === id);
+
+  let idd = parseInt(req.params.id);
+  let index = states.findIndex(s => s.id === idd);
 
   if (index === -1) {
     return res.status(404).json({ message: "State not found" });
