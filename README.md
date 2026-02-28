@@ -1,29 +1,36 @@
-# State API – Express.js Project
+# 🌍 State Statistics API
 
-A simple REST API built using Express.js that provides multiple routes to fetch and filter Indian state data based on GDP and population.
-
-Base URL:
-http://localhost:3000
+A RESTful API built with **Node.js** and **Express.js** that provides Indian state data based on **GDP** and **population**.  
+The API supports filtering, sorting, and dynamic routing.
 
 ---
 
-## Tech Stack
+## 🚀 Live Demo
 
-- Node.js
-- Express.js
+🔗 **Base URL:**  
+https://node-task3-2.onrender.com
 
 ---
 
-## Data Structure
+## 🛠 Tech Stack
 
-The API uses an array of 8 state objects.
+- **Node.js**
+- **Express.js**
+- REST API Architecture
+
+---
+
+## 📂 Data Structure
+
+The API uses an array of **8 Indian state objects**.
 
 Each state contains:
-- name
-- gdp
-- population
 
-Example:
+- `name`
+- `gdp`
+- `population`
+
+### Example Object
 
 ```json
 {
@@ -35,110 +42,137 @@ Example:
 
 ---
 
-# Available Routes (13 Routes)
+# 📌 API Endpoints (13 Routes)
 
-## 1. Get All States
-GET /states
+## 1️⃣ Get All States
+**GET** `/states`
 
-Example:
-http://localhost:3000/states
-
----
-
-## 2. Get States by Minimum Population
-GET /states?minPopulation=50000000
-
-Example:
-http://localhost:3000/states?minPopulation=80000000
+👉 https://node-task3-2.onrender.com/states
 
 ---
 
-## 3. Get State with Highest GDP
-GET /states/highest-gdp
+## 2️⃣ Get States by Minimum Population
+**GET** `/states?minPopulation=50000000`
+
+👉 https://node-task3-2.onrender.com/states?minPopulation=80000000
 
 ---
 
-## 4. Get State with Lowest GDP
-GET /states/lowest-gdp
+## 3️⃣ Get State with Highest GDP
+**GET** `/states/highest-gdp`
+
+👉 https://node-task3-2.onrender.com/states/highest-gdp
 
 ---
 
-## 5. Get Top 3 States by GDP
-GET /states/top3-gdp
+## 4️⃣ Get State with Lowest GDP
+**GET** `/states/lowest-gdp`
+
+👉 https://node-task3-2.onrender.com/states/lowest-gdp
 
 ---
 
-## 6. Get State by Name
-GET /states/:name
+## 5️⃣ Get Top 3 States by GDP
+**GET** `/states/top3-gdp`
 
-Example:
-http://localhost:3000/states/Gujarat
+👉 https://node-task3-2.onrender.com/states/top3-gdp
 
 ---
 
-## 7. Invalid State Handling
-If state does not exist:
+## 6️⃣ Get State by Name
+**GET** `/states/:name`
 
-Response:
+Example:  
+👉 https://node-task3-2.onrender.com/states/Gujarat
+
+---
+
+## ⚠️ Error Handling
+
+### 🔴 State Not Found
+
+If the requested state does not exist:
+
 ```json
 {
   "message": "State not found"
 }
 ```
 
-Status Code:
-404
+**Status Code:** `404`
 
 ---
 
-## 8. Invalid Route Handling
-If route does not exist:
+### 🔴 Route Not Found
 
-Response:
+If an invalid route is accessed:
+
 ```json
 {
   "message": "Route not found"
 }
 ```
 
-Status Code:
-404
+**Status Code:** `404`
 
 ---
 
-# How to Run
+# 🧪 Testing the API
 
-1. Initialize project
+You can test the API using:
+
+- Browser
+- Postman
+- Thunder Client (VS Code Extension)
+
+---
+
+# 💻 Local Development Setup
+
+### 1️⃣ Clone the repository
+
 ```
-npm init -y
+git clone <your-repository-url>
+cd <your-project-folder>
 ```
 
-2. Install dependencies
+### 2️⃣ Install dependencies
+
 ```
-npm install express
+npm install
 ```
 
-3. Start server
+### 3️⃣ Start the server
+
 ```
 node index.js
 ```
 
-Server will run on:
+Server will run locally on:
+
+```
 http://localhost:3000
+```
 
 ---
 
-# Concepts Used
+# 📚 Concepts Used
 
-- Express routing
-- Query parameters
-- Dynamic routes
-- Array methods (filter, reduce, sort)
-- HTTP status codes
-- 404 error handling
+- Express Routing
+- Query Parameters
+- Dynamic Routes
+- Array Methods (`filter`, `reduce`, `sort`)
+- HTTP Status Codes
+- Custom 404 Handling
 
 ---
 
-# Author
+# 👨‍💻 Author
 
-Harshil Patel
+**Harshil Patel**
+
+---
+
+# 📄 License
+
+This project is open-source and available for learning purposes.
